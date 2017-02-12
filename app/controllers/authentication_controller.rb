@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 class AuthenticationController < ApplicationController
   def sign_in
-    user = User.find_by!(email: user_params[:email])
+    user = User.find_by(email: user_params[:email])
 
-    if user.authenticate(user_params[:password])
+    if user && user.authenticate(user_params[:password])
       token = JWT.encode({ user_id: user.id }, Rails.application.secrets.secret_key_base)
       render json: { token: token }
     else
