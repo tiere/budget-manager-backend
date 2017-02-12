@@ -19,3 +19,6 @@ Style/TrailingCommaInArguments:
 
 Style/ClassAndModuleChildren:
   Enabled: false
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
