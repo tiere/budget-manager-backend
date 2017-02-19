@@ -39,14 +39,20 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (7.1.4)
+    bcrypt (3.1.11)
     builder (3.2.3)
     byebug (9.0.6)
+    codeclimate-test-reporter (1.0.5)
+      simplecov
     concurrent-ruby (1.0.4)
+    docile (1.1.5)
     erubis (2.7.0)
     ffi (1.9.17)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.8.0)
+    json (2.0.3)
+    jwt (1.5.6)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -66,6 +72,7 @@ GEM
     pg (0.19.0)
     puma (3.7.0)
     rack (2.0.1)
+    rack-cors (0.4.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.1)
@@ -95,6 +102,11 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    simplecov (0.13.0)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
     spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -119,14 +131,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   byebug
+  codeclimate-test-reporter (~> 1.0.0)
+  jwt
   listen (~> 3.0.5)
   pg (~> 0.18)
   puma (~> 3.0)
+  rack-cors
   rails (~> 5.0.1)
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
 
 BUNDLED WITH
-   1.14.3
+   1.14.4

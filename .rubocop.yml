@@ -1,5 +1,7 @@
 AllCops:
   TargetRubyVersion: 2.4
+  Exclude:
+    - 'db/schema.rb'
 
 Metrics/LineLength:
   Max: 120
@@ -19,3 +21,6 @@ Style/TrailingCommaInArguments:
 
 Style/ClassAndModuleChildren:
   Enabled: false
+
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
