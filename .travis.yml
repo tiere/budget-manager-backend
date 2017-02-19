@@ -1,6 +1,9 @@
 language: ruby
 rvm:
-  - 2.4.0
+- 2.4.0
 before_script:
-  - rake db:create
-  - rake db:schema:load
+- rake db:create
+- rake db:schema:load
+env:
+  global:
+    secure: OxjFUT4TWQsdQZA/UkQoRLeeWV0cGWu+Sf3wL70fXXK0QEdH7df3tPcFDGjk3HIjuR0GtrcmYA09AT+Vq3OWsd8sa3dA7fWbK7FvmVJIhnQTGTLUCV4nmXCZivfg7VaJeH8L2ADi8ng8CxxcIwA3ebyeLm0DY4Mmy4KFiNBdcaqXFQyPd/+IOrgrWpRCtklxBOddYCcuUk2xrrnS4ycvqOBBEf3DZ5W96L+R7bVtRAcxazMvUHXGlNMJbmVgj72njLBBQuq9AqHKb0bD1H70D5vO5kXP3hNhan3GTJg4uFLNZlL1vYtt9SNduykz77N25NlRVuLoMwmUCcXIq+/luSek+0XR7wQv3de5bsjYVak2TEGxjY73jt6wSGvgsBkxq4HCjmMeeo0nf2kPGsNlw6IKyZOWfLxRX+e6jzsxbwkRtePzOlPOG1Usg3CPO/STRWYn70THLc2ZBLJaMnJnH5FHogsPQuGN2XsA9nlw+u9N5QA+COHrR8OTskBVcvotxR6A8UqW2H8nf6znudsPzQ9vRTcIi9xvsrVI2FbVVBafqt1BUcSDIa0uhRU1mMlWnKSvpsAXK94nbPmveEKlGySD8jBpgSLcCIUiod6tP//+iSioNW+s2YqhzMEvRp6yWwANTkYuIhb7CD4RGjwv1PCaSAx2Vx6n3djoNFf4Utw=
