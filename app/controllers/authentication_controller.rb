@@ -4,7 +4,7 @@ class AuthenticationController < ApplicationController
     user = User.find_by(email: user_params[:email])
 
     if user && user.authenticate(user_params[:password])
-      token = JWT.encode({ user_id: user.id }, Rails.application.secrets.secret_key_base)
+      token = JWT.encode({ sub: "User:#{user.id}" }, Rails.application.secrets.secret_key_base)
       render json: { token: token }
     else
       head :unauthorized

@@ -11,7 +11,7 @@ class AuthenticationControllerTest < ActionDispatch::IntegrationTest
 
     decoded_token = JWT.decode(token, Rails.application.secrets.secret_key_base)
 
-    assert_equal users(:one).id, decoded_token[0]["user_id"]
+    assert_equal users(:one).id, decoded_token[0]["sub"].split(":")[1].to_i
   end
 
   test "/sign_in with invalid password" do
